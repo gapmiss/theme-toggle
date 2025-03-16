@@ -4,11 +4,11 @@ An Obsidian.md plugin which adds a ribbon icon and command for toggling between 
 
 ## Installation
 
-1. [Find at http://obsidian.md](https://obsidian.md/plugins?search=theme-toggle) or [Open in Obsidian App](obsidian://show-plugin?id=theme-toggle)
+1. Find at [http://obsidian.md/plugins/](https://obsidian.md/plugins?search=theme-toggle) or [Open in Obsidian App](obsidian://show-plugin?id=theme-toggle)
 
 or in the Obsidian.app:
 
-1. Community Plugins > Browse
+1. Settings > Community Plugins > Browse
 2. Search for "Theme toggle"
 
 Manually:
