@@ -4,7 +4,7 @@ An Obsidian.md plugin which adds a ribbon icon and command for toggling between 
 
 ## Installation
 
-1. Find at [http://obsidian.md/plugins/](https://obsidian.md/plugins?search=theme-toggle) or [Open in Obsidian App](obsidian://show-plugin?id=theme-toggle)
+Find at [http://obsidian.md/plugins/](https://obsidian.md/plugins?search=theme-toggle)
 
 or in the Obsidian.app:
 
@@ -23,6 +23,6 @@ or:
 
 1.  download `main.js` & `manifest.json`
 2.  create a new folder `/path/to/vault/.obsidian/plugins/theme-toggle`
-3.  move all 3 files to `/path/to/vault/.obsidian/plugins/theme-toggle`
+3.  move both files to `/path/to/vault/.obsidian/plugins/theme-toggle`
 4.  Settings > Community plugins > reload **Installed plugins**
 5.  enable plugin
