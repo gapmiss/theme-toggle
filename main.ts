@@ -9,16 +9,16 @@ export default class ThemeToggle extends Plugin {
         setTimeout(() => {
           let ribbonIcon: HTMLElement | null = window.document.querySelector('.ribbon-theme-toggle-plugin');
           setIcon(ribbonIcon!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
-          ribbonIcon!.setAttr("aria-label","Use " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
+          ribbonIcon!.setAttr("aria-label","Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
         }, 10);
       })
     );
 
-    const ribbonIconEl = this.addRibbonIcon(this.getThemeIcon(), "Use " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
+    const ribbonIconEl = this.addRibbonIcon(this.getThemeIcon(), "Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
       // @ts-ignore
       this.app.changeTheme(this.getCurrentTheme() === 'obsidian' ? 'moonstone' : 'obsidian');
       setIcon(evt.target as HTMLElement, this.getThemeIcon());
-      (evt.target as HTMLElement).setAttr("aria-label","Use " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
+      (evt.target as HTMLElement).setAttr("aria-label","Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
     });
 
     ribbonIconEl.addClass('ribbon-theme-toggle-plugin');
