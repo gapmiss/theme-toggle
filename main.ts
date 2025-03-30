@@ -33,13 +33,9 @@ export default class ThemeToggle extends Plugin {
         setIcon(ribbonIcon!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
       }
     });
-
-    console.log('Theme toggle plugin loaded');
   }
 
-  onunload() {
-    console.log('Theme toggle plugin unloaded');
-  }
+  onunload() {}
 
   getCurrentTheme() {
     // @ts-ignore
