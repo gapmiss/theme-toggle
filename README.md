@@ -2,6 +2,8 @@
 
 An Obsidian.md plugin which adds a ribbon icon and command for toggling between dark & light theme modes.
 
+![Screenshot of theme-toggle plugin](https://github.com/gapmiss/theme-toggle/blob/master/screenshots/THEME-TOGGLE-PLUGIN-Obsidian-v1.8.9-2025-04-10-11.38.53.gif?raw=true)
+
 ## Installation
 
 Find at [http://obsidian.md/plugins/](https://obsidian.md/plugins?search=theme-toggle)
