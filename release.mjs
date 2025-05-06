@@ -22,7 +22,7 @@ const VERSION_TYPES = {
 
 // Default settings
 const DEFAULT_VERSION_TYPE = VERSION_TYPES.PATCH;
-const RELEASE_FILES = ['main.js', 'manifest.json', 'styles.css'];
+const RELEASE_FILES = ['main.js', 'manifest.json'];
 const MIN_APP_VERSION = "0.15.0"
 
 // Store original versions for rollback if needed

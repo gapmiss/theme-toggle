@@ -15,15 +15,7 @@ or in the Obsidian.app:
 
 Manually:
 
-1. download the latest [release archive](https://github.com/gapmiss/theme-toggle/releases/download/0.1.0/theme-toggle-v0.1.0.zip)
-2. uncompress the downloaded archive
-3. move the `theme-toggle` folder to `/path/to/vault/.obsidian/plugins/` 
-4.  Settings > Community plugins > reload **Installed plugins**
-5.  enable plugin
-
-or:
-
-1.  download `main.js` & `manifest.json`
+1.  download `main.js` & `manifest.json` from the latest [release](https://github.com/gapmiss/theme-toggle/releases/)
 2.  create a new folder `/path/to/vault/.obsidian/plugins/theme-toggle`
 3.  move both files to `/path/to/vault/.obsidian/plugins/theme-toggle`
 4.  Settings > Community plugins > reload **Installed plugins**
