@@ -14,7 +14,7 @@ export default class ThemeToggle extends Plugin {
       })
     );
 
-    const ribbonIconEl = this.addRibbonIcon(this.getThemeIcon(), "Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
+    const ribbonIconEl: HTMLElement = this.addRibbonIcon(this.getThemeIcon(), "Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
       // @ts-ignore
       this.app.changeTheme(this.getCurrentTheme() === 'obsidian' ? 'moonstone' : 'obsidian');
       setIcon(evt.target as HTMLElement, this.getThemeIcon());
@@ -44,7 +44,7 @@ export default class ThemeToggle extends Plugin {
   }
 
   getThemeIcon() {
-    let moonOrSunIcon = this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon';
+    let moonOrSunIcon: string = this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon';
     return moonOrSunIcon;
   }
 
