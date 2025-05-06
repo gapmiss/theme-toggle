@@ -1,5 +1,5 @@
 {
-	"name": "ribbon-theme-toggle",
+	"name": "theme-toggle",
 	"version": "0.1.0",
 	"description": "Dark/light theme toggle via ribbon icon.",
 	"main": "main.js",
