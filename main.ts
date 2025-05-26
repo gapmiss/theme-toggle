@@ -4,17 +4,7 @@ export default class ThemeToggle extends Plugin {
 
   async onload() {
 
-    this.registerEvent(
-      this.app.workspace.on('css-change', () => {
-        setTimeout(() => {
-          let ribbonIcon: HTMLElement | null = window.document.querySelector('.ribbon-theme-toggle-plugin');
-          setIcon(ribbonIcon!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
-          ribbonIcon!.setAttr("aria-label","Toggle to " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
-        }, 10);
-      })
-    );
-
-    const ribbonIconEl: HTMLElement = this.addRibbonIcon(this.getThemeIcon(), "Theme toggle: " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
+    const ribbonIconEl: HTMLElement = this.addRibbonIcon(this.getThemeIcon(), "Toggle to " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode", (evt: MouseEvent) => {
       // @ts-ignore
       this.app.changeTheme(this.getCurrentTheme() === 'obsidian' ? 'moonstone' : 'obsidian');
       setIcon(evt.target as HTMLElement, this.getThemeIcon());
@@ -23,14 +13,22 @@ export default class ThemeToggle extends Plugin {
 
     ribbonIconEl.addClass('ribbon-theme-toggle-plugin');
 
+    this.registerEvent(
+      this.app.workspace.on('css-change', () => {
+        setTimeout(() => {
+          setIcon(ribbonIconEl!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
+          ribbonIconEl!.setAttr("aria-label","Toggle to " + (this.getCurrentTheme() === 'obsidian' ? 'light' : 'dark') + " mode");
+        }, 10);
+      })
+    );
+
     this.addCommand({
       id: "toggle-theme",
       name: "Toggle theme",
       callback: () => {
         // @ts-ignore
         this.app.changeTheme(this.getCurrentTheme() === 'obsidian' ? 'moonstone' : 'obsidian');
-        let ribbonIcon: HTMLElement | null = window.document.querySelector('.ribbon-theme-toggle-plugin');
-        setIcon(ribbonIcon!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
+        setIcon(ribbonIconEl!, this.getCurrentTheme() === 'obsidian' ? 'sun' : 'moon');
       }
     });
   }
